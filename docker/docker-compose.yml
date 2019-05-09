@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  static:
+    image: "demos"
+    container_name: "demos"
+    working_dir: /demos
+    build:
+      context: "../"
+      dockerfile: "docker/Dockerfile"
+    ports:
+      - "8080:80"
+    volumes:
+      - "../:/demos/"
+volumes:
+  tmp:
+  root:
