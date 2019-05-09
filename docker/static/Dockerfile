@@ -1,11 +1,9 @@
 FROM alpine
 
 RUN apk add \
-    nginx \
-    nodejs-current \
-    yarn
+    nginx
 
-COPY ./docker/custom-nginx.conf /etc/nginx/
+COPY ./docker/static/custom-nginx.conf /etc/nginx/
 ENTRYPOINT ["nginx"]
 
 CMD ["-c", "/etc/nginx/custom-nginx.conf"]

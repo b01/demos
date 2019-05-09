@@ -7,11 +7,12 @@ services:
     working_dir: /demos
     build:
       context: "../"
-      dockerfile: "docker/Dockerfile"
+      dockerfile: "docker/static/Dockerfile"
     ports:
       - "8080:80"
     volumes:
       - "../:/demos/"
+      - "../docker/static/demos.conf:/etc/nginx/conf.d/default.conf"
 volumes:
   tmp:
   root:
