@@ -1,4 +1,38 @@
-.map__render {
+.map {
+    display: grid;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-template-areas:
+        "map head"
+        "map body"
+        "map action";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.map__area {
     min-height: 200px;
-    min-width: 200px;
+    min-width: 200px
+}
+
+.map__info {
+
+}
+.map__copy__title {
+    grid-area: head
+}
+.map__copy__subTitle {
+    grid-area: head
+}
+
+@media screen and (max-width: 400px) {
+    .map {
+        grid-template-areas:
+            "map"
+            "head"
+            "body"
+            "action";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr
+    }
 }

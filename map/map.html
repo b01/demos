@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta content="encoding" charset="UTF-8" />
         <title>Map Component</title>
         <link rel="stylesheet" type="text/css" href="css/map.css" />
         <script type="text/javascript" src="js/buildMap.js"></script>
         <script type="text/javascript" src="js/setPlaceholders.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRN3eaafjzAKkvypn8BBcJjdNtYAiIUd8"
-                type="text/javascript"
-        >
-        </script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRN3eaafjzAKkvypn8BBcJjdNtYAiIUd8"></script>
     </head>
     <body>
         <article class="map">
-            <div class="map__render" data-js="gMap"></div>
-            <div class="map__copy">
+            <div class="map__area" data-js="gMap"></div>
+            <div class="map__info">
                 <h2 class="map__copy__title" data-js="headline">There are [homes] homes listed in your area</h2>
                 <h3 class="map__copy__subTitle" data-js="subHeadline">as of [date]</h3>
                 <p class="map__copy__body" data-js="body">Homes are brought and sold everyday in your area for a median sale price of [maxPurchasePrice]</p>
